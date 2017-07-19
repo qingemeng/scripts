@@ -22,3 +22,6 @@ brew cask install virtualbox
 brew cask install iterm2
 brew cask install telegram
 brew cask install shiftit
+brew cask install spotify
+
+brew cask install slack
