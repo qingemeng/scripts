@@ -23,5 +23,8 @@ brew cask install iterm2
 brew cask install telegram
 brew cask install shiftit
 brew cask install spotify
-
 brew cask install slack
+brew cask install rstudio
+brew tap homebrew/science
+brew install Caskroom/cask/xquartz
+brew install r
