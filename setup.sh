@@ -10,9 +10,11 @@ echo ".DS_Store" ~/.gitignore_global
 # brew packages
 #
 brew install wget
+brew install openssl
 brew install fish
 brew install node
 brew install thefuck
+brew install python3
 #
 # brew cask
 #
