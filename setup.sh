@@ -29,6 +29,7 @@ brew cask install shiftit
 brew cask install spotify
 brew cask install slack
 brew cask install rstudio
+brew cask install github-desktop
 brew tap homebrew/science
 brew install Caskroom/cask/xquartz
 brew install r
