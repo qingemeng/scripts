@@ -84,3 +84,6 @@ end
 thefuck --alias | source
 set -xg THEFUCK_OVERRIDDEN_ALIASES 'git' 
 ##----/GIT------
+
+## autojump
+if test -f /Users/qingemeng/.autojump/share/autojump/autojump.fish; . /Users/qingemeng/.autojump/share/autojump/autojump.fish; end
