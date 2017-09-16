@@ -16,6 +16,7 @@ brew install fish
 brew install node
 brew install thefuck
 brew install python3
+brew install yarn
 #
 # brew cask
 #
