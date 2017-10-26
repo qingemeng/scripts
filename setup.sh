@@ -31,5 +31,6 @@ brew cask install slack
 brew cask install rstudio
 brew cask install github-desktop
 brew tap homebrew/science
+brew cask install fluor
 brew install Caskroom/cask/xquartz
 brew install r
