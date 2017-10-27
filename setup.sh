@@ -17,6 +17,8 @@ brew install node
 brew install thefuck
 brew install python3
 brew install yarn
+brew install tldr
+brew install axel
 #
 # brew cask
 #
