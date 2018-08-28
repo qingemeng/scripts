@@ -8,6 +8,13 @@ git config --global core.excludesfile '~/.gitignore_global'
 echo ".idea" ~/.gitignore_global
 echo ".DS_Store" ~/.gitignore_global
 #
+# asdf
+#
+
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.1
+echo 'source ~/.asdf/asdf.fish' >> ~/.config/fish/config.fish
+mkdir -p ~/.config/fish/completions; and cp ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+
 # brew packages
 #
 brew install wget
