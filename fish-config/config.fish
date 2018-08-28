@@ -22,6 +22,10 @@ alias gst='git stash'
 alias gsta='git stash apply'
 alias gunstage='git reset HEAD'
 
+# alias for ruby
+alias brspec='bundle exec rspec'
+alias brake='bundle exec rake'
+
 # checkout pull request
 function gcopr
   git fetch origin pull/$argv/head:pr-$argv ;and git checkout pr-$argv;
@@ -85,5 +89,19 @@ thefuck --alias | source
 set -xg THEFUCK_OVERRIDDEN_ALIASES 'git' 
 ##----/GIT------
 
-## autojump
-if test -f /Users/qingemeng/.autojump/share/autojump/autojump.fish; . /Users/qingemeng/.autojump/share/autojump/autojump.fish; end
+. (rbenv init -|psub)
+  if test -f /Users/gemeng/.autojump/share/autojump/autojump.fish; . /Users/gemeng/.autojump/share/autojump/autojump.fish; end
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gemeng/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/gemeng/google-cloud-sdk/path.fish.inc'; else; . '/Users/gemeng/google-cloud-sdk/path.fish.inc'; end; end
+
+#GOLANG
+set PATH $PATH $GOPATH/bin/
+source ~/.asdf/asdf.fish
