@@ -33,6 +33,7 @@ brew cask install sublime-text
 brew cask install google-chrome
 brew cask install virtualbox
 brew cask install iterm2
+brew cask install alfred
 brew cask install telegram
 brew cask install shiftit
 brew cask install spotify
