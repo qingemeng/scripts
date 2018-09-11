@@ -89,8 +89,8 @@ thefuck --alias | source
 set -xg THEFUCK_OVERRIDDEN_ALIASES 'git' 
 ##----/GIT------
 
-. (rbenv init -|psub)
-  if test -f /Users/gemeng/.autojump/share/autojump/autojump.fish; . /Users/gemeng/.autojump/share/autojump/autojump.fish; end
+## autojump
+if test -f $HOME/.autojump/share/autojump/autojump.fish; . $HOME/.autojump/share/autojump/autojump.fish; end
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -100,8 +100,22 @@ set -xg THEFUCK_OVERRIDDEN_ALIASES 'git'
 [ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish ]; and . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.fish
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gemeng/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/Users/gemeng/google-cloud-sdk/path.fish.inc'; else; . '/Users/gemeng/google-cloud-sdk/path.fish.inc'; end; end
+if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source "$HOME/google-cloud-sdk/path.fish.inc"; else; . "$HOME/google-cloud-sdk/path.fish.inc"; end; end
 
 #GOLANG
-set PATH $PATH $GOPATH/bin/
-source ~/.asdf/asdf.fish
+set -gx DEV $HOME/Documents/dev
+set -x -U GOPATH $DEV/go
+set -U fish_user_paths $GOPATH/bin/ $fish_user_paths
+if test -f ~/.asdf/asdf.fish; source ~/.asdf/asdf.fish; end
+
+## android home
+set -gx ANDROID_HOME $HOME/Library/Android/sdk
+set -U fish_user_paths $ANDROID_HOME/tools $fish_user_paths
+set -U fish_user_paths $ANDROID_HOME/platform-tools $fish_user_paths
+
+## python
+alias python=python3
+alias pip=pip3
+
+set -gx USER_BASE_PATH (python -m site --user-base)
+set -U fish_user_paths $USER_BASE_PATH/bin $fish_user_paths
