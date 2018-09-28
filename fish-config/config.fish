@@ -108,10 +108,12 @@ set -x -U GOPATH $DEV/go
 set -U fish_user_paths $GOPATH/bin/ $fish_user_paths
 if test -f ~/.asdf/asdf.fish; source ~/.asdf/asdf.fish; end
 
-## android home
-set -gx ANDROID_HOME $HOME/Library/Android/sdk
-set -U fish_user_paths $ANDROID_HOME/tools $fish_user_paths
-set -U fish_user_paths $ANDROID_HOME/platform-tools $fish_user_paths
+# android home
+if test -d $HOME/Library/Android/sdk;
+  set -gx ANDROID_HOME $HOME/Library/Android/sdk
+  set -U fish_user_paths $ANDROID_HOME/tools $fish_user_paths
+  set -U fish_user_paths $ANDROID_HOME/platform-tools $fish_user_paths
+end
 
 ## python
 alias python=python3
