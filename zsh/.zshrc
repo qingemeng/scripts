@@ -112,3 +112,6 @@ if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/path.zsh.inc' ]; then . '/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc'; fi
+
+# JAVA
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
