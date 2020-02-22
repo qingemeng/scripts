@@ -115,3 +115,7 @@ if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc' ]; the
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
+#go
+export GOPATH=/Users/gemengqin/Documents/dev/go
+
