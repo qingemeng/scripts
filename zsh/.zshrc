@@ -114,8 +114,12 @@ if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/path.zsh.inc' ]; then . '/
 if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc'; fi
 
 # JAVA
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 #go
-export GOPATH=/Users/gemengqin/Documents/dev/go
+export GOPATH=$HOME/Documents/dev/go
+
+#android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
 
