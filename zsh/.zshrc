@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$PATH:`pwd`/flutter/bin"
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/gemengqin/.oh-my-zsh"
+export ZSH="/Users/gemeng/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,7 +68,13 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+plugins=(
+	git
+	brew
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,16 +108,17 @@ source $ZSH/oh-my-zsh.sh
 # antigen bundle zsh-users/zsh-autosuggestions
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gemengqin/dev/google/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/gemeng/dev/google/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gemeng/dev/google/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gemengqin/dev/google/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/gemeng/dev/google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gemeng/dev/google/google-cloud-sdk/completion.zsh.inc'; fi
 
 # JAVA
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
