@@ -25,7 +25,6 @@ brew install autojump
 # brew cask
 #
 brew install --cask telegram
-brew install --cask shiftit
 brew install --cask spotify
 brew install --cask cleanmymac
 brew install --cask slack
@@ -33,9 +32,19 @@ brew install --cask whatsapp
 brew install --cask wechat
 brew install --cask sourcetree
 brew tap homebrew/science
-brew install --cask fluor
 brew install Caskroom/cask/xquartz
+brew install --cask 1password
+brew install --cask iterm2
+brew install --cask rectangle
+brew install --cask sublime-text
+brew install openjdk@11
 
+echo 'config zsh'
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+source zsh/.zshrc
 
-# sublime
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+echo 'config vim'
+brew update
+mkdir ~/.vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+source vimconfig/.vimrc

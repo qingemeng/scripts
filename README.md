@@ -1,4 +1,6 @@
 # scripts
+install java runtime 
+
 * install script
 
 ## vim

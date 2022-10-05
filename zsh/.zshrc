@@ -69,6 +69,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
+if [ ! -d "$ZSH/custom/plugins/zsh-syntax-highlighting" ]; then
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH/custom/plugins/zsh-syntax-highlighting
+fi
+
+if [ ! -d "$ZSH/custom/plugins/zsh-autosuggestions" ]; then
+	git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH/custom/plugins/zsh-autosuggestions
+fi
+
+
 plugins=(
 	git
 	brew
@@ -77,6 +86,7 @@ plugins=(
   )
 
 source $ZSH/oh-my-zsh.sh
+
 
 # User configuration
 
@@ -121,6 +131,7 @@ if [ -f '/Users/gemeng/dev/google/google-cloud-sdk/path.zsh.inc' ]; then . '/Use
 if [ -f '/Users/gemeng/dev/google/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gemeng/dev/google/google-cloud-sdk/completion.zsh.inc'; fi
 
 # JAVA
+# "configuring java home"
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 #go
